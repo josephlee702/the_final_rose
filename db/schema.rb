@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_11_233542) do
   create_table "bachelorettes", force: :cascade do |t|
     t.string "name"
     t.integer "season_number"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,9 +42,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_11_233542) do
   end
 
   create_table "outings", force: :cascade do |t|
-    t.string "outing_name"
+    t.string "name"
     t.string "location"
-    t.integer "contestant_count"
+    t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
