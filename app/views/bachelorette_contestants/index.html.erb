@@ -7,4 +7,10 @@
     <% end %>
     <%= "Age: #{contestant.age}" %><br>
     <%= "Hometown: #{contestant.hometown}" %>
-  <% end %>
+  <% end %><br>
+  <br>
+
+<%= "These Contestants are from these hometowns:" %>
+<% @bachelorette.contestants.each do |contestant| %>
+  <%= contestant.hometown_only %><%= "," %>
+<% end %>

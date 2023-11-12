@@ -3,8 +3,8 @@
 @bach3 = Bachelorette.create!(name: "Rachel Lindsay", season_number: 13, description: "A nail biter")
 
 @cont1 = @bach1.contestants.create!(name: "Brandon Jones", age: 26, hometown: "Portland, Oregon")
-@cont2 = @bach1.contestants.create!(name: "Rick Leach", age: 32, hometown: "Portland, Oregon")
-@cont3 = @bach2.contestants.create!(name: "Jed Wyatt", age: 2, hometown: "Sevierville, Tennessee")
+@cont2 = @bach1.contestants.create!(name: "Rick Leach", age: 32, hometown: "Boston, Massachusetts")
+@cont3 = @bach1.contestants.create!(name: "Jed Wyatt", age: 2, hometown: "Boston, Massachusetts")
 @cont4 = @bach2.contestants.create!(name: "Mike Johnson", age: 31, hometown: "San Antonio, Texas")
 @cont5 = @bach2.contestants.create!(name: "Devin Harris", age: 27, hometown: "Sherman Oaks, California")
 @cont6 = @bach2.contestants.create!(name: "Hunter Jones", age: 24, hometown: "Westchester, California")
