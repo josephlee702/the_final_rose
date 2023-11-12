@@ -20,4 +20,9 @@ RSpec.describe "the bachelorettes's show page" do
     click_on("Contestants")
     expect(current_path).to eq("/bachelorettes/#{@bach1.id}/contestants")
   end
+
+  it "shows the average age of that bachelorette's contestants" do
+    visit "/bachelorettes/#{@bach1.id}"
+    expect(page).to have_content("Average Age of Contestants: 29")
+  end
 end
