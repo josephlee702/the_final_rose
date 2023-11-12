@@ -2,7 +2,9 @@
 
 <h3><u>Bachelors</u>:</h3>
   <% @bachelorette.contestants.each do |contestant| %>
-    <li>
-      <%= contestant.name %><br>
-    </li>
+    <h3><%= form_with url:"/contestants/#{contestant.id}", method: :get, local: :true do |i| %>
+      <%= link_to "#{contestant.name}", "/contestants/#{contestant.id}"%> 
+    <%end%></h3>
+    <%= "Age: #{contestant.age}" %><br>
+    <%= "Hometown: #{contestant.hometown}" %>
   <% end %>

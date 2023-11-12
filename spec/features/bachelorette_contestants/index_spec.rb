@@ -14,4 +14,21 @@ RSpec.describe "the bachelorette's contestants index page" do
     expect(page).to have_content("#{@cont1.name}")
     expect(page).to have_content("#{@cont2.name}")
   end
+
+  it "shows the contestants of a bachelorette" do
+    visit "/bachelorettes/#{@bach1.id}/contestants"
+    expect(page).to have_content("#{@cont1.name}")
+    expect(page).to have_content("Age: #{@cont1.age}")
+    expect(page).to have_content("Hometown: #{@cont1.hometown}")
+    expect(page).to have_content("#{@cont2.name}")
+    expect(page).to have_content("Age: #{@cont2.age}")
+    expect(page).to have_content("Hometown: #{@cont2.hometown}")
+  end
+
+  it "has a link to the contestant's show page" do
+    visit "/bachelorettes/#{@bach1.id}/contestants"
+    expect(page).to have_link("#{@cont1.name}")
+    click_on("#{@cont1.name}")
+    expect(current_path).to eq("/contestants/#{@cont1.id}")
+  end
 end
