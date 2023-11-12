@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/contestants/:id", to: "contestants#show"
 
   get "/outings/:id", to: "outings#show"
+  patch "/outings/:id", to: "outings#update"
 end

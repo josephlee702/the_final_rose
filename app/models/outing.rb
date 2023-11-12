@@ -5,4 +5,8 @@ class Outing < ApplicationRecord
   def contestant_count
     contestants.count
   end
+
+  def remove_contestant(contestant)
+    contestants.delete(contestant)
+  end
 end

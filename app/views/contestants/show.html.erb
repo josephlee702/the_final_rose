@@ -3,5 +3,5 @@
 
 <%= "Outings:" %><br>
 <% @contestant.outings.each do |outing| %>
-    <%= link_to "#{outing.name}", "/outings/#{outing.id}" %>
+    <%= link_to "#{outing.name}", "/outings/#{outing.id}" %><br>
 <% end %>
