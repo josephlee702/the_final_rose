@@ -1,0 +1,7 @@
+<h2><u><%= @bachelorette.name %></u></h2>
+<p><u>Season Number</u>: <%= @bachelorette.season_number %></p>
+<p><u>Description of Season</u>: <%= @bachelorette.description %></p>
+
+<%= form_with url:"/bachelorettes/#{@bachelorette.id}/contestants", method: :get, local: :true do |i| %>
+  <%= link_to "Contestants", "/bachelorettes/#{@bachelorette.id}/contestants"%> 
+<%end%>

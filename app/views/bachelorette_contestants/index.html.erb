@@ -1,0 +1,8 @@
+<h2><u><%= @bachelorette.name %></u></h2>
+
+<h3><u>Bachelors</u>:</h3>
+  <% @bachelorette.contestants.each do |contestant| %>
+    <li>
+      <%= contestant.name %><br>
+    </li>
+  <% end %>
