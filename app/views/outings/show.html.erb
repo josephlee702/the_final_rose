@@ -5,5 +5,9 @@
 
 <h3><u><%= "Contestants" %></u></h3>
 <% @outing.contestants.each do |contestant| %>
-    <%= "#{contestant.name}" %>
+  <%= "#{contestant.name}" %>
+  <%= form_with url: "/outings/#{@outing.id}", method: :patch, local: true do |i| %>
+    <%= i.hidden_field :contestant_id, value: contestant.id %>
+    <%= i.submit "Remove" %>
+  <% end %>
 <% end %>
