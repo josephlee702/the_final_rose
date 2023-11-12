@@ -10,7 +10,7 @@ RSpec.describe "the bachelorette's contestants index page" do
   it "shows the contestants of a bachelorette" do
     visit "/bachelorettes/#{@bach1.id}/contestants"
     expect(page).to have_content("#{@bach1.name}")
-    expect(page).to have_content("Bachelors:")
+    expect(page).to have_content("Bachelorettes:")
     expect(page).to have_content("#{@cont1.name}")
     expect(page).to have_content("#{@cont2.name}")
   end
